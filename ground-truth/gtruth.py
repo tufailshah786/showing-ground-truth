@@ -19,11 +19,11 @@ def rotate_point(pointX, pointY, originX, originY, angle):
      return int( new_x ), int (new_y)
 def draw_rotated_rectangle(img, x1y1, x1y2, x2y1, x2y2 ):
      cv2.polylines(img,[np.array([(x1y1),(x2y1),(x2y2),(x1y2)])],True,(0,255,255),5)     
-for filename in os.listdir("C:/ground-truth/test/"): 
+for filename in os.listdir("C:/showing-ground-tuth-master/ground-truth/test/"): 
     filename=os.path.splitext(os.path.basename(filename))[0]
-    tree = ET.parse("C:/ground-truth/test/"+filename+'.xml')
+    tree = ET.parse("C:/showing-ground-tuth-master/ground-truth/test/"+filename+'.xml')
     root = tree.getroot()
-    img = cv2.imread("C:/ground-truth/test/"+filename + ".jpg")
+    img = cv2.imread("C:/showing-ground-tuth-master/ground-truth/test/"+filename + ".jpg")
     for objects in tree.iter('object'):
        for doc in objects.findall('robndbox'):
         xc=float(doc.find('cx').text)
@@ -42,6 +42,6 @@ for filename in os.listdir("C:/ground-truth/test/"):
         x1y2 = rotate_point(x1,y2, xc, yc, angle)
         x2y1 = rotate_point(x2,y1, xc, yc, angle)
         draw_rotated_rectangle(img, (x1y1), (x1y2), (x2y1), (x2y2))
-        cv2.imwrite("C:/ground-truth/test/"+filename + "G.jpg",img)
+        cv2.imwrite("C:/showing-ground-tuth-master/ground-truth/test/"+filename + "G.jpg",img)
         print(filename+"G created")
     i +=1
