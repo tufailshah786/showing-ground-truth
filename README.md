@@ -1,6 +1,6 @@
 # showing-ground-tuth
 
-drawing the bounding box on image with the help of annotation file 
+Drawing the bounding box on image with the help of annotation file 
 
 First of all you need the latest version of python installed in your pc
 
