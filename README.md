@@ -1,4 +1,4 @@
-# showing-ground-tuth
+# showing-ground-truth
 
 Drawing the bounding box on image with the help of annotation file 
 
