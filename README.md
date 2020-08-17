@@ -8,7 +8,7 @@ step 1: download the zip file and extract the file in C:/ folder
         after extraction you will get this folder "showing-ground-tuth-master"
         
 step 2: open the "ground-truth" folder and store the images along with annotation file in the "test" folder
-        (its only for the rotated bounding box, xml file that contains the point xc,yc,w,h,angle)
+        (its only for the rotated bounding box, xml file that contains the point cx,cy,w,h,angle)
         
 step 3: open the command prompt and then go to the extract folder "showing-ground-tuth-master\ground-truth"
         by writing this command "cd C:\showing-ground-tuth-master\ground-truth" 
