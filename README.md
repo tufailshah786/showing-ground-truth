@@ -1,4 +1,4 @@
-# showing-ground-truth
+# showing-ground-truth(oriented bounding_box)
 
 Drawing the bounding box on image with the help of annotation file 
 
